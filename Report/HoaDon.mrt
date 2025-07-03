@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <CalculationMode>Interpretation</CalculationMode>
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="2">
+      <HoaDon Ref="2" type="DataTableSource" isKey="true">
+        <Alias>HoaDon</Alias>
+        <Columns isList="true" count="7">
+          <value>MaHD,System.Int32</value>
+          <value>MaKH,System.Int32</value>
+          <value>TenKH,System.String</value>
+          <value>MaNV,System.Int32</value>
+          <value>TenNhanVien,System.String</value>
+          <value>NgayLap,System.DateTime</value>
+          <value>TongTien,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>fe9d04599d954b0c89d7c874899e5743</Key>
+        <Name>HoaDon</Name>
+        <NameInSource>data.HoaDon</NameInSource>
+      </HoaDon>
+      <ChiTietHoaDon Ref="3" type="DataTableSource" isKey="true">
+        <Alias>ChiTietHoaDon</Alias>
+        <Columns isList="true" count="5">
+          <value>ORIGINAL,MaSach,MaSach,MaSach,System.Int32,fd77a80b5e11499380c3c974671cd07c</value>
+          <value>ORIGINAL,TenSach,TenSach,TenSach,System.String,_x0033_c69efd62f2c4c9b94fcd4aefb77d645</value>
+          <value>ORIGINAL,SoLuong,SoLuong,SoLuong,System.Int32,a4eb3b62a0974ad3821b2c29a5f209df</value>
+          <value>ORIGINAL,DonGia,DonGia,DonGia,System.Int32,_x0032_a6657d3b5fb4991ad2a8680bf0b6811</value>
+          <value>ThanhTien,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>f4196914a68640098e43681a6dfb3d3e</Key>
+        <Name>ChiTietHoaDon</Name>
+        <NameInSource>data.ChiTietHoaDon</NameInSource>
+      </ChiTietHoaDon>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <UserFunctions isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>1cab550a89e24270b94492d4f28d2b0f</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <Panel3 Ref="5" type="Panel" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.9,7.7,0.7</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text10 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.7,0.2,0.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Tổng tiền
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text10>
+            <TongTien Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.7,0.2,2.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Name>TongTien</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{HoaDon.TongTien}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </TongTien>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>Panel3</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </Panel3>
+        <Panel2 Ref="8" type="Panel" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.8,7.7,1.1</ClientRectangle>
+          <Components isList="true" count="1">
+            <Table1 Ref="9" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,7.7,0.3</ClientRectangle>
+              <Components isList="true" count="5">
+                <Table1_Cell1 Ref="10" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0,0.7,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>0</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="9" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{ChiTietHoaDon.MaSach}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Table1_Cell1>
+                <Table1_Cell2 Ref="11" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.7,0,2.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>1</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="9" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{ChiTietHoaDon.TenSach}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Table1_Cell2>
+                <Table1_Cell3 Ref="12" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>3.5,0,0.7,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>2</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="9" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{ChiTietHoaDon.SoLuong}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Table1_Cell3>
+                <Table1_Cell4 Ref="13" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.2,0,1.4,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>3</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="9" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{ChiTietHoaDon.DonGia}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Table1_Cell4>
+                <Table1_Cell5 Ref="14" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>5.6,0,2.1,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>4</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell5</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="9" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{ChiTietHoaDon.ThanhTien}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </Table1_Cell5>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName isNull="true" />
+              <DataSourceName>ChiTietHoaDon</DataSourceName>
+              <Expressions isList="true" count="0" />
+              <Filters isList="true" count="0" />
+              <MinHeight>0.1</MinHeight>
+              <Name>Table1</Name>
+              <NumberID>25</NumberID>
+              <Page isRef="4" />
+              <Parent isRef="8" />
+              <RowCount>1</RowCount>
+              <Sort isList="true" count="0" />
+            </Table1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>Panel2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </Panel2>
+        <Panel4 Ref="15" type="Panel" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.1,7.7,0.7</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text3 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>Mã sách
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text5 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.7,0.4,2.8,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>Tên sách
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text7 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.5,0.4,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>Số lượng
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+            <Text9 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,0.4,1.4,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>Đơn giá</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+            <Text11 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,0.4,2.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>Thành tiền</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text11>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>Panel4</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </Panel4>
+        <ReportTitleBand1 Ref="21" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,7.72,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0,2.1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,20</Font>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="21" />
+              <Text>Hóa đơn bán sách</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Panel1 Ref="23" type="Panel" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,7.7,1.3</ClientRectangle>
+              <Components isList="true" count="8">
+                <Text2 Ref="24" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0.1,0.1,1,0.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>Text2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>Mã hóa đơn</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                </Text2>
+                <MaHD Ref="25" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.5,0.1,2.9,0.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>MaHD</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>{HoaDon.MaHD}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </MaHD>
+                <Text4 Ref="26" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0.1,0.4,1.3,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>Text4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>Tên khách hàng</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                </Text4>
+                <TenKH Ref="27" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.5,0.4,2.9,0.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>TenKH</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>{HoaDon.TenKH}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </TenKH>
+                <Text6 Ref="28" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0.1,0.7,1.2,0.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>Text6</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>Tên nhân viên</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                </Text6>
+                <TenNhanVien Ref="29" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.5,0.7,2.9,0.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>TenNhanVien</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>{HoaDon.TenNhanVien}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </TenNhanVien>
+                <Text8 Ref="30" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0.1,1,1,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>Text8</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>Ngày mua</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                </Text8>
+                <NgayLap Ref="31" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.5,1,2.9,0.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Times New Roman,14</Font>
+                  <Name>NgayLap</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="23" />
+                  <Text>{HoaDon.NgayLap}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                </NgayLap>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Name>Panel1</Name>
+              <Page isRef="4" />
+              <Parent isRef="21" />
+            </Panel1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportTitleBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>62cf7a4787a7440e8d09cea2c627db7d</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportAuthor>Thành</ReportAuthor>
+  <ReportChanged>6/11/2025 4:27:49 AM</ReportChanged>
+  <ReportCreated>6/8/2025 9:20:34 PM</ReportCreated>
+  <ReportFile>C:\Users\LENOVO\Documents\Projects\C#\QuanLyNhaSach\Report\HoaDon.mrt</ReportFile>
+  <ReportGuid>133f3b40f0c14165a12738f218ce5a84</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2025.2.5.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
